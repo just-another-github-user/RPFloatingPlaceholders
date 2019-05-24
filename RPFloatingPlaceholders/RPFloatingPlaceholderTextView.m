@@ -223,12 +223,12 @@
         
         if ([self respondsToSelector:@selector(tintColor)]) {
             // Inset the placeholder by the same 5px on both sides so that it works in right-to-left languages too
-            CGRect placeholderFrame = CGRectMake(5.f, 10.f, self.frame.size.width - 10.f, self.frame.size.height - 20.f);
+            CGRect placeholderFrame = CGRectMake(5.f, 10.f, self.frame.size.width - 10.f, self.frame.size.height);
             [self.placeholder drawInRect:placeholderFrame
                       withAttributes:placeholderAttributes];
 
         } else {
-            CGRect placeholderFrame = CGRectMake(8.f, 8.f, self.frame.size.width - 10.f, self.frame.size.height - 20.f);
+            CGRect placeholderFrame = CGRectMake(8.f, 8.f, self.frame.size.width - 10.f, self.frame.size.height);
             NSAttributedString *attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder
                                                                                         attributes:placeholderAttributes];
             [attributedPlaceholder drawInRect:placeholderFrame];
